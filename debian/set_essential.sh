@@ -3,7 +3,7 @@ USER_NAME=$1
 
 ### For VBox Guest Additions ###
 apt install -y build-essential module-assistant
-m-a prepare -y
+m-a prepare
 
 ### Enable for $USER_NAME to use "sudo" command ###
 SUDOERS_FILE=/etc/sudoers
