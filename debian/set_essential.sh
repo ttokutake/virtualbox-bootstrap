@@ -18,3 +18,8 @@ update-grub
 
 ### Install essential packages ###
 apt install -y vim git tree bash-completion terminator
+
+### Change directories' name from JPN to EN
+apt install xdg-user-dirs-gtk
+su - $USER_NAME -c 'LANG=C xdg-user-dirs-gtk-update'
+### NOTICE: Check "Don't ask me again" box ###
