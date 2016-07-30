@@ -17,9 +17,14 @@ sed -re 's/^GRUB_TIMEOUT=[0-9]+$/GRUB_TIMEOUT=0/' $GRUB_CONFIG_FILE -i
 update-grub
 
 ### Install essential packages ###
-apt install -y vim git tree bash-completion terminator
+apt install -y vim ssh git tree bash-completion terminator
 
 ### Change directories' name from JPN to EN
 apt install xdg-user-dirs-gtk
 su - $USER_NAME -c 'LANG=C xdg-user-dirs-gtk-update'
 ### NOTICE: Check "Don't ask me again" box ###
+
+### Remove unused packages ###
+apt-get purge pluma galculator firefox-esr libreoffice-common libreoffice-core gimp gnome-orca
+apt-get autoremove --purge
+apt-get autoclean
