@@ -3,7 +3,8 @@ USER_NAME=$1
 
 ### Install VBox Guest Addisions ###
 MOUNTED_DIR=/media/cdrom
-bash $MOUNTED_DIR/VBoxLinuxAdditions.run
+bash   $MOUNTED_DIR/VBoxLinuxAdditions.run
+umount $MOUNTED_DIR
 
 ### Set shared directory ###
 SHARED_DIR=/media/sf_share
