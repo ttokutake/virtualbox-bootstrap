@@ -25,3 +25,5 @@ while [ "$input" != 'ok' ]; do
   read input
 done
 bash $SCRIPT_DIR/set_vbox_guest_additions.sh $USER_NAME
+
+echo 'Please reboot Debian.'
