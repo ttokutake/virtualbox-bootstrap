@@ -1,3 +1,5 @@
+#!/bin/bash
+
 CODE_DIR=~/codes
 BASHRC=~/.bashrc
 
