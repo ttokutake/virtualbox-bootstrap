@@ -45,6 +45,13 @@ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs
 asdf install    nodejs 4.4.7
 asdf global     nodejs 4.4.7
 
+
 ### Install Rust ###
 sudo apt -y install curl
 curl -sf -L https://static.rust-lang.org/rustup.sh | sh
+
+
+### Install Phoenix Framework ###
+sudo apt install inotify-tools
+mix local.hex --force
+mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez --force
