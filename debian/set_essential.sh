@@ -16,6 +16,19 @@ GRUB_CONFIG_FILE=/etc/default/grub
 sed -re 's/^GRUB_TIMEOUT=[0-9]+$/GRUB_TIMEOUT=0/' $GRUB_CONFIG_FILE -i
 update-grub
 
+### Add Static Network ###
+echo '
+  auto eth1
+  iface eth1 inet static
+  address 192.168.56.101
+  netmask 255.255.255.0
+' > /etc/network/interfaces.d/eth1
+/etc/init.d/networking restart
+### NOTICE: Assume that VM has "Host-Only Ethernet Adapter" as below ###
+###   Address: 192.168.56.1                                          ###
+###   Netmask: 255.255.255.0                                         ###
+
+
 ### Install essential packages ###
 apt install -y vim ssh git tree bash-completion terminator
 
