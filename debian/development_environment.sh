@@ -41,6 +41,7 @@ asdf global     elixir 1.3.2
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby
 asdf install    ruby 2.3.1
 asdf global     ruby 2.3.1
+gem install bundler
 
 ### Install Node.js ###
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs
