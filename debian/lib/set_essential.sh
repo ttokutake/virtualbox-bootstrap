@@ -13,8 +13,13 @@ chmod 440 $SUDOERS_FILE
 
 ### Pass through GRUB menu ###
 GRUB_CONFIG_FILE=/etc/default/grub
-sed -re 's/^GRUB_TIMEOUT=[0-9]+$/GRUB_TIMEOUT=0/' $GRUB_CONFIG_FILE -i
+sed -re 's/^(GRUB_TIMEOUT=)[0-9]+$/\10/' $GRUB_CONFIG_FILE -i
 update-grub
+
+### Pass through LightDM Login ###
+LIGHT_DM_CONFIG_FILE=/etc/lightdm/lightdm.conf
+sed -re "s/^#(autologin-user=).*$/\1$USER_NAME/" $LIGHT_DM_CONFIG_FILE -i
+sed -re 's/^#(autologin-user-timeout=.*)$/\1/'   $LIGHT_DM_CONFIG_FILE -i
 
 ### Add Static Network ###
 echo '
