@@ -30,7 +30,7 @@ echo '
 
 
 ### Install essential packages ###
-apt install -y vim ssh git tree bash-completion terminator
+apt install -y vim ssh git tree ag bash-completion terminator
 
 ### Change directories' name from JPN to EN
 apt install xdg-user-dirs-gtk
