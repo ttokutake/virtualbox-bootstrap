@@ -1,5 +1,28 @@
 #!/bin/bash -euo
 
+if [ ! -e '~/.ssh/id_rsa' ]; then
+  echo 'Please put "~/.ssh/id_rsa".'
+  exit 1
+fi
+
+if [ ! -e '~/.ssh/private.id_rsa' ]; then
+  echo 'Please put "~/.ssh/private.id_rsa".'
+  exit 1
+fi
+if [ ! -e '~/.ssh/work.id_rsa' ]; then
+  echo 'Please put "~/.ssh/work.id_rsa".'
+  exit 1
+fi
+
+if [ ! -e '~/private.gitconfig' ]; then
+  echo 'Please put "~/private.gitconfig".'
+  exit 1
+fi
+if [ ! -e '~/work.gitconfig' ]; then
+  echo 'Please put "~/work.gitconfig".'
+  exit 1
+fi
+
 BASHRC='~/.bashrc'
 
 
