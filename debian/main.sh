@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -euo
 
 if [ `whoami` != 'root' ]; then
   echo 'Please run as "root".'
@@ -7,7 +7,7 @@ fi
 
 USER_NAME=$1
 if [ "$USER_NAME" == '' ]; then
-  echo "Usage: bash $0 <User Name>"
+  echo "Usage: bash -euo $0 <User Name>"
   exit 1
 fi
 
@@ -18,13 +18,13 @@ LIB_DIR=$SCRIPT_DIR/lib
 apt update
 apt upgrade -y
 
-bash $LIB_DIR/set_essential.sh $USER_NAME
+bash -euo $LIB_DIR/set_essential.sh $USER_NAME
 
 input=''
 while [ "$input" != 'ok' ]; do
   echo -n "Please input \"ok\" after inserting VBox Guest Additions' disc: "
   read input
 done
-bash $LIB_DIR/set_vbox_guest_additions.sh $USER_NAME
+bash -euo $LIB_DIR/set_vbox_guest_additions.sh $USER_NAME
 
 echo 'Please reboot Debian.'

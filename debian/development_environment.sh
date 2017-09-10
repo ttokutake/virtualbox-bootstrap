@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -euo
 
 CODE_DIR=~/codes
 BASHRC=~/.bashrc
