@@ -5,7 +5,7 @@ BASHRC=~/.bashrc
 
 
 ### Install essential packages ###
-sudo apt install -y vim ssh git tree silversearcher-ag bash-completion terminator
+sudo apt install -y vim ssh git tree silversearcher-ag direnv bash-completion terminator
 
 
 ### Set essential settings ###
