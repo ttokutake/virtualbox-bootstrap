@@ -52,6 +52,10 @@ asdf install    nodejs 8.4.0
 asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
 asdf install    rust 1.20.0
 
+### Install Go ###
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf install    golang 1.8
+
 
 ### Install Phoenix Framework ###
 sudo apt install inotify-tools
