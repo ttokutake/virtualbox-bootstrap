@@ -33,29 +33,24 @@ eval $SET_ASDF
 ### Install Erlang ###
 sudo apt install -y build-essential libncurses5-dev openssl libssl-dev fop xsltproc unixodbc-dev
 asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang
-asdf install    erlang 19.0
-asdf global     erlang 19.0
+asdf install    erlang 20.0
 
 ### Install Elixir ###
 asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir
-asdf install    elixir 1.3.2
-asdf global     elixir 1.3.2
+asdf install    elixir 1.5.1
 
 ### Install Ruby ###
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby
-asdf install    ruby 2.3.1
-asdf global     ruby 2.3.1
+asdf install    ruby 2.4.1
 gem install bundler
 
 ### Install Node.js ###
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs
-asdf install    nodejs 4.4.7
-asdf global     nodejs 4.4.7
-
+asdf install    nodejs 8.4.0
 
 ### Install Rust ###
-sudo apt -y install curl
-curl -sf -L https://static.rust-lang.org/rustup.sh | sh
+asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
+asdf install    rust 1.20.0
 
 
 ### Install Phoenix Framework ###
