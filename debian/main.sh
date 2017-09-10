@@ -51,9 +51,6 @@ echo '
 ###   Netmask: 255.255.255.0                                         ###
 
 
-### Install essential packages ###
-apt install -y vim ssh git tree silversearcher-ag bash-completion terminator
-
 ### Change directories' name from JPN to EN
 apt install xdg-user-dirs-gtk
 su - $USER_NAME -c 'LANG=C xdg-user-dirs-gtk-update'

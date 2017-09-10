@@ -4,6 +4,10 @@ CODE_DIR=~/codes
 BASHRC=~/.bashrc
 
 
+### Install essential packages ###
+sudo apt install -y vim ssh git tree silversearcher-ag bash-completion terminator
+
+
 ### Set essential settings ###
 SETTINGS_DIR=$CODE_DIR/settings
 SETTINGS_REPO=git@github.com:ttokutake/settings.git
