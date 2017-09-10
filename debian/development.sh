@@ -13,9 +13,13 @@ SETTINGS_DIR=$CODE_DIR/settings
 SETTINGS_REPO=git@github.com:ttokutake/settings.git
 mkdir -p $SETTINGS_DIR
 git clone $SETTINGS_REPO $SETTINGS_DIR
+mkdir ~/works
+ln -s $SETTINGS_DIR/.envrc ~/.envrc
+direnv allow               ~/.envrc
+ln -s $SETTINGS_DIR/works/.envrc ~/works/.envrc
+direnv allow                     ~/works/.envrc
 echo "source $SETTINGS_DIR/.bash_profile" >> $BASHRC
-ln -s $SETTINGS_DIR/.gitconfig ~/.gitconfig
-ln -s $SETTINGS_DIR/.vimrc     ~/.vimrc
+ln -s $SETTINGS_DIR/.vimrc ~/.vimrc
 DEIN_DIR=~/.vim/dein/repos/github.com/Shougo/dein.vim
 DEIN_REPO=https://github.com/Shougo/dein.vim.git
 mkdir -p $DEIN_DIR
