@@ -1,7 +1,6 @@
 #!/bin/bash -euo
 
-CODE_DIR=~/codes
-BASHRC=~/.bashrc
+BASHRC='~/.bashrc'
 
 
 ### Install essential packages ###
@@ -9,10 +8,9 @@ sudo apt install -y vim ssh git tree silversearcher-ag direnv bash-completion te
 
 
 ### Set essential settings ###
-SETTINGS_DIR=$CODE_DIR/settings
-SETTINGS_REPO=git@github.com:ttokutake/settings.git
+SETTINGS_DIR='~/codes/settings'
 mkdir -p $SETTINGS_DIR
-git clone $SETTINGS_REPO $SETTINGS_DIR
+git clone git@github.com:ttokutake/settings.git $SETTINGS_DIR
 mkdir ~/works
 ln -s $SETTINGS_DIR/.envrc ~/.envrc
 direnv allow               ~/.envrc
@@ -20,16 +18,14 @@ ln -s $SETTINGS_DIR/works/.envrc ~/works/.envrc
 direnv allow                     ~/works/.envrc
 echo "source $SETTINGS_DIR/.bash_profile" >> $BASHRC
 ln -s $SETTINGS_DIR/.vimrc ~/.vimrc
-DEIN_DIR=~/.vim/dein/repos/github.com/Shougo/dein.vim
-DEIN_REPO=https://github.com/Shougo/dein.vim.git
+DEIN_DIR='~/.vim/dein/repos/github.com/Shougo/dein.vim'
 mkdir -p $DEIN_DIR
-git clone $DEIN_REPO $DEIN_DIR
+git clone https://github.com/Shougo/dein.vim.git $DEIN_DIR
 
 
 ### Install asdf ###
-ASDF_REPO=https://github.com/asdf-vm/asdf.git
-ASDF_DIR=~/.asdf
-git clone $ASDF_REPO $ASDF_DIR
+ASDF_DIR='~/.asdf'
+git clone https://github.com/asdf-vm/asdf.git $ASDF_DIR
 SET_ASDF="source $ASDF_DIR/asdf.sh && source $ASDF_DIR/asdf.sh"
 echo $SET_ASDF >> $BASHRC
 eval $SET_ASDF
