@@ -1,5 +1,4 @@
 #!/bin/bash
-set -euo pipefail
 
 if [ "`whoami`" != 'root' ]; then
   echo 'Please run as "root".'
@@ -11,6 +10,8 @@ if [ "$USER_NAME" == '' ]; then
   echo "Usage: bash $0 <User Name>"
   exit 1
 fi
+
+set -euo pipefail
 
 
 ### Enable for $USER_NAME to use "sudo" command ###
