@@ -75,6 +75,8 @@ asdf install    ruby 2.4.1
 echo
 
 echo '### Install Node.js ###'
+sudo apt install -y dirmngr
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs
 asdf install    nodejs 8.4.0
 echo
