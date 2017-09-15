@@ -42,5 +42,13 @@ apt-get autoclean
 apt update
 apt upgrade -y
 
+### Rename NIC name to eth0 ###
+sed -re 's/^(GRUB_CMDLINE_LINUX)=""$/\1="net.ifnames=0 biosdevname=0"/' $GRUB_CONFIG_FILE -i
+grub-mkconfig -o /boot/grub/grub.cfg
+echo '
+  auto eth0
+  iface eth0 inet dhcp
+' > /etc/network/interfaces.d/eth0
+
 
 echo 'Please reboot Debian.'
