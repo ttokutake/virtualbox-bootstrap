@@ -90,10 +90,3 @@ echo '### Install Go ###'
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 asdf install    golang 1.8
 echo
-
-
-echo '### Install Phoenix Framework ###'
-sudo apt install inotify-tools
-mix local.hex --force
-mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez --force
-echo
