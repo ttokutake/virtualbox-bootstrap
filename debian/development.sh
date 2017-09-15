@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -eo pipefail
 
 if [ ! -e ~/.ssh/id_rsa ]; then
   echo 'Please put "~/.ssh/id_rsa".'
