@@ -24,7 +24,7 @@ if [ ! -e ~/work.gitconfig ]; then
   exit 1
 fi
 
-BASHRC='~/.bashrc'
+BASHRC=~/.bashrc
 
 
 echo '### Install essential packages ###'
@@ -33,7 +33,7 @@ echo
 
 
 echo '### Set essential settings ###'
-SETTINGS_DIR='~/codes/settings'
+SETTINGS_DIR=~/codes/settings
 mkdir -p $SETTINGS_DIR
 git clone git@github.com:ttokutake/settings.git $SETTINGS_DIR
 mkdir ~/works
@@ -43,14 +43,14 @@ ln -s $SETTINGS_DIR/works/.envrc ~/works/.envrc
 direnv allow                     ~/works/.envrc
 echo "source $SETTINGS_DIR/.bash_profile" >> $BASHRC
 ln -s $SETTINGS_DIR/.vimrc ~/.vimrc
-DEIN_DIR='~/.vim/dein/repos/github.com/Shougo/dein.vim'
+DEIN_DIR=~/.vim/dein/repos/github.com/Shougo/dein.vim
 mkdir -p $DEIN_DIR
 git clone https://github.com/Shougo/dein.vim.git $DEIN_DIR
 echo
 
 
 echo '### Install asdf ###'
-ASDF_DIR='~/.asdf'
+ASDF_DIR=~/.asdf
 git clone https://github.com/asdf-vm/asdf.git $ASDF_DIR
 SET_ASDF="source $ASDF_DIR/asdf.sh && source $ASDF_DIR/asdf.sh"
 echo $SET_ASDF >> $BASHRC
