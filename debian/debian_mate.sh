@@ -1,4 +1,5 @@
-#!/bin/bash -euo
+#!/bin/bash
+set -euo pipefail
 
 if [ "`whoami`" != 'root' ]; then
   echo 'Please run as "root".'
@@ -7,7 +8,7 @@ fi
 
 USER_NAME="$1"
 if [ "$USER_NAME" == '' ]; then
-  echo "Usage: bash -euo $0 <User Name>"
+  echo "Usage: bash $0 <User Name>"
   exit 1
 fi
 
