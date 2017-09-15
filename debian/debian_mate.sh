@@ -35,6 +35,9 @@ apt install xdg-user-dirs-gtk
 su - $USER_NAME -c 'LANG=C xdg-user-dirs-gtk-update'
 ### NOTICE: Check "Don't ask me again" box ###
 
+### Add mirror site ###
+echo 'deb http://ftp.jp.debian.org/debian/ stretch main contrib non-free' >> /etc/apt/sources.list
+
 ### Remove unused packages ###
 apt-get purge -y pluma galculator firefox-esr thunderbird atril libreoffice-common libreoffice-core gimp eom gnome-orca goldendict khmerconverter
 apt-get autoremove --purge -y
