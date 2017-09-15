@@ -43,6 +43,7 @@ echo
 
 echo '### Add mirror site ###'
 echo 'deb http://ftp.jp.debian.org/debian/ stretch main contrib non-free' >> /etc/apt/sources.list
+echo 'deb http://ftp.jp.debian.org/debian stretch-updates main contrib'   >> /etc/apt/sources.list
 echo
 
 echo '### Remove unused packages ###'
