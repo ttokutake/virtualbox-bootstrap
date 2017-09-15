@@ -12,9 +12,6 @@ if [ "$USER_NAME" == '' ]; then
 fi
 
 
-apt update
-apt upgrade -y
-
 ### Enable for $USER_NAME to use "sudo" command ###
 SUDOERS_FILE='/etc/sudoers'
 chmod 600 $SUDOERS_FILE
@@ -40,6 +37,9 @@ su - $USER_NAME -c 'LANG=C xdg-user-dirs-gtk-update'
 apt-get purge -y pluma galculator firefox-esr thunderbird atril libreoffice-common libreoffice-core gimp eom gnome-orca goldendict khmerconverter
 apt-get autoremove --purge -y
 apt-get autoclean
+
+apt update
+apt upgrade -y
 
 
 echo 'Please reboot Debian.'
