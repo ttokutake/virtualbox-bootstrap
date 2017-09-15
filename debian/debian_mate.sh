@@ -37,7 +37,7 @@ su - $USER_NAME -c 'LANG=C xdg-user-dirs-gtk-update'
 ### NOTICE: Check "Don't ask me again" box ###
 
 ### Remove unused packages ###
-apt-get purge -y pluma galculator firefox-esr libreoffice-common libreoffice-core gimp gnome-orca
+apt-get purge -y pluma galculator firefox-esr libreoffice-common libreoffice-core gimp gnome-orca goldendict khmerconverter atril
 apt-get autoremove --purge -y
 apt-get autoclean
 
