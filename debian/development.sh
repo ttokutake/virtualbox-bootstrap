@@ -26,6 +26,13 @@ fi
 
 BASHRC=~/.bashrc
 
+echo '### Put SSH config ###'
+echo '
+  Host github.com
+    User git
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa
+' >> ~/.ssh/config
 
 echo '### Install essential packages ###'
 sudo apt install -y vim ssh git tree silversearcher-ag direnv bash-completion terminator
