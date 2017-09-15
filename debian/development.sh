@@ -55,6 +55,7 @@ git clone https://github.com/asdf-vm/asdf.git $ASDF_DIR
 SET_ASDF="source $ASDF_DIR/asdf.sh && source $ASDF_DIR/asdf.sh"
 echo $SET_ASDF >> $BASHRC
 eval $SET_ASDF
+sudo apt install -y curl
 echo
 
 echo '### Install Erlang ###'
