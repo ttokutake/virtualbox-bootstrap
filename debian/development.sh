@@ -72,7 +72,6 @@ echo
 echo '### Install Ruby ###'
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby
 asdf install    ruby 2.4.1
-gem install bundler
 echo
 
 echo '### Install Node.js ###'
