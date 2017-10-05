@@ -67,4 +67,10 @@ echo '
 echo
 
 
+echo '### Increase vm.max_map_count ###'
+echo 'vm.max_map_count = 262144' >> /etc/sysctl.conf
+sysctl -p
+echo
+
+
 echo 'Please reboot Debian.'
