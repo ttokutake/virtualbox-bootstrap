@@ -91,6 +91,17 @@ asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 asdf install    golang 1.8
 echo
 
+# echo '### Install Swift ###'
+# curl -O https://cmake.org/files/v3.9/cmake-3.9.4.tar.gz
+# tar xzf cmake-3.9.4.tar.gz
+# cd cmake-3.9.4
+# ./configure
+# make
+# sudo make install
+# sudo apt install autoconf libblocksruntime-dev
+# asdf plugin-add swift
+# asdf install    swift 4.0
+
 
 echo '### Install Docker CE ###'
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common
