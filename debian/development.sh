@@ -6,21 +6,12 @@ if [ ! -e ~/.ssh/id_rsa ]; then
   exit 1
 fi
 
-if [ ! -e ~/.ssh/private.id_rsa ]; then
-  echo 'Please put "~/.ssh/private.id_rsa".'
+if [ ! -e ~/.gitconfig.private ]; then
+  echo 'Please put "~/.gitconfig.private".'
   exit 1
 fi
-if [ ! -e ~/.ssh/work.id_rsa ]; then
-  echo 'Please put "~/.ssh/work.id_rsa".'
-  exit 1
-fi
-
-if [ ! -e ~/private.gitconfig ]; then
-  echo 'Please put "~/private.gitconfig".'
-  exit 1
-fi
-if [ ! -e ~/work.gitconfig ]; then
-  echo 'Please put "~/work.gitconfig".'
+if [ ! -e ~/.gitconfig.work ]; then
+  echo 'Please put "~/.gitconfig.work".'
   exit 1
 fi
 
