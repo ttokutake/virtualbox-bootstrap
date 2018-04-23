@@ -8,6 +8,10 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gnupg2 software
 curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable"
 sudo apt-get update
+sudo apt install aufs-tools apparmor cgroupfs-mount
+# curl -Lo docker-ce.deb https://download.docker.com/linux/ubuntu/dists/xenial/pool/stable/amd64/docker-ce_17.03.2~ce-0~ubuntu-xenial_amd64.deb
+# sudo dpkg -i docker-ce.deb
+# rm docker-ce.deb
 sudo apt-get install -y docker-ce
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
@@ -34,3 +38,5 @@ echo 'export MINIKUBE_HOME=$HOME'                   >> $BASHRC
 echo 'export CHANGE_MINIKUBE_NONE_USER=true'        >> $BASHRC
 echo 'export KUBECONFIG=$HOME/.kube/config'         >> $BASHRC
 echo
+
+# sudo -E minikube start --vm-driver=none
