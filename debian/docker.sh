@@ -9,6 +9,8 @@ curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gp
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable"
 sudo apt-get update
 sudo apt-get install -y docker-ce
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
 echo
 
 echo '### Install Docker Compose ###'
