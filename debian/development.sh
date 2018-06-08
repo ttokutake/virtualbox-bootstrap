@@ -69,10 +69,10 @@ asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir
 asdf install    elixir 1.5.1
 echo
 
-echo '### Install Ruby ###'
-asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby
-asdf install    ruby 2.4.1
-echo
+# echo '### Install Ruby ###'
+# asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby
+# asdf install    ruby 2.4.1
+# echo
 
 echo '### Install Node.js ###'
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs
@@ -86,10 +86,10 @@ asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
 asdf install    rust 1.20.0
 echo
 
-echo '### Install Go ###'
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-asdf install    golang 1.8
-echo
+# echo '### Install Go ###'
+# asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+# asdf install    golang 1.8
+# echo
 
 # echo '### Install Swift ###'
 # curl -O https://cmake.org/files/v3.9/cmake-3.9.4.tar.gz
