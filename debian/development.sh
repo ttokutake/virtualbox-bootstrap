@@ -19,9 +19,18 @@ BASHRC=~/.bashrc
 
 
 echo '### Install essential packages ###'
-sudo apt install -y vim ssh git tree silversearcher-ag direnv bash-completion terminator
+sudo apt install -y ssh git tree silversearcher-ag direnv bash-completion terminator
 echo
 
+echo '### Install vim from the source ###'
+VIM_SRC_DIR=~/codes/vim
+mkdir -p $VIM_SRC_DIR
+git clone https://github.com/vim/vim.git $VIM_SRC_DIR
+cd $VIM_SRC_DIR/src
+make
+sudo make install
+cd
+echo
 
 echo '### Set essential settings ###'
 SETTINGS_DIR=~/codes/settings
