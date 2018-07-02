@@ -18,3 +18,9 @@ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 # For Node.js
 asdf plugin-add nodejs
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+
+# Install docker-ce
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce
+sudo systemctl enable docker
