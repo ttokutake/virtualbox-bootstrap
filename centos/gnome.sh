@@ -4,3 +4,5 @@
 
 # Rename directory names
 LANG=C xdg-user-dirs-gtk-update
+
+sudo yum erase firefox
