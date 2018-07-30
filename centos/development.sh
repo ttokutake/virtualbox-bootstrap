@@ -22,10 +22,6 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 # For Node.js
 asdf plugin-add ruby
 
-# For Python
-asdf plugin-add python
-brew install bzip2 openssl readline sqlite xz tcl-tk
-
 # Install docker-ce
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
