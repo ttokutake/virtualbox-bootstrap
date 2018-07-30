@@ -1,11 +1,15 @@
-# Install Linuxbrew
+# Install Linuxbrew for vim and git
 sudo yum groupinstall 'Development Tools' && sudo yum install curl file git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
-test -d /home/linuxbrew/.linuxbrew && PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
-test -r ~/.bash_profile && echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.bash_profile
+#test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
+#test -d /home/linuxbrew/.linuxbrew && PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
+#test -r ~/.bash_profile && echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.bash_profile
+brew install vim git
+echo 'alias vim="PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH vim"' >> ~/.bashrc
+echo 'alias git="PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH git"' >> ~/.bashrc
 
-brew install git vim direnv tree jq
+# Utility
+sudo yum install tree direnv jq
 
 # Install asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.5.0
@@ -19,8 +23,12 @@ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 asdf plugin-add nodejs
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
-# For Node.js
+# For Ruby
 asdf plugin-add ruby
+
+# For Python
+yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel
+asdf plugin-add python
 
 # Install docker-ce
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
