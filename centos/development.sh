@@ -24,7 +24,7 @@ asdf plugin-add ruby
 
 # For Python
 asdf plugin-add python
-sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel
+brew install bzip2 openssl readline sqlite xz tcl-tk
 
 # Install docker-ce
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
