@@ -19,6 +19,13 @@ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 asdf plugin-add nodejs
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
+# For Node.js
+asdf plugin-add ruby
+
+# For Python
+asdf plugin-add python
+sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel
+
 # Install docker-ce
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
