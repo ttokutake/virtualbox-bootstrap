@@ -15,3 +15,6 @@ nmcli c modify enp0s8 ipv4.dns 192.168.56.1
 nmcli c modify enp0s8 ipv4.method manual
 nmcli c down enp0s8
 nmcli c up enp0s8
+
+# Bridge Network
+# nmcli c add type ethernet ifname enp0s9 con-name enp0s9
