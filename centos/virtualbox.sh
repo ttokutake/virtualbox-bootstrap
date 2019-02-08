@@ -1,5 +1,6 @@
 # For install VBox Guest Addition
 sudo yum install gcc make kernel-devel
+sudo yum remove open-vm-tools
 
 # Create shared directory
 USER=`whoami`
