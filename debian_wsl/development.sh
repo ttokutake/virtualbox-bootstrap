@@ -16,6 +16,7 @@ if [ ! -e ~/.gitconfig.work ]; then
 fi
 
 BASHRC=~/.bashrc
+echo >> $BASHRC
 
 echo '### Install essential packages ###'
 sudo apt install -y ssh git tree direnv bash-completion
