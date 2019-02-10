@@ -41,31 +41,11 @@ echo '###############################################'
 su - $USER_NAME -c 'LANG=C xdg-user-dirs-gtk-update'
 echo
 
-echo '### Add mirror site ###'
-echo 'deb http://ftp.jp.debian.org/debian/ stretch main contrib non-free' >> /etc/apt/sources.list
-echo 'deb http://ftp.jp.debian.org/debian stretch-updates main contrib'   >> /etc/apt/sources.list
-echo
-
 echo '### Remove unused packages ###'
-apt-get purge -y pluma galculator firefox-esr thunderbird atril libreoffice-common libreoffice-core gimp eom gnome-orca goldendict khmerconverter
-apt-get autoremove --purge -y
-apt-get autoclean
+apt purge -y chromium firefox-esr thunderbird brasero gimp hexchat cheese gnome-games libreoffice-common rhythmbox pidgin gnote shotwell sound-juicer transmission-common
+apt autoremove --purge -y
+apt autoclean
 echo
-
-echo '### Update all packages ###'
-apt update
-apt upgrade -y
-echo
-
-echo '### Rename NIC name to eth0 ###'
-sed -re 's/^(GRUB_CMDLINE_LINUX)=""$/\1="net.ifnames=0 biosdevname=0"/' $GRUB_CONFIG_FILE -i
-grub-mkconfig -o /boot/grub/grub.cfg
-echo '
-  auto eth0
-  iface eth0 inet dhcp
-' > /etc/network/interfaces.d/eth0
-echo
-
 
 echo '### Increase vm.max_map_count ###'
 echo 'vm.max_map_count = 262144' >> /etc/sysctl.conf
