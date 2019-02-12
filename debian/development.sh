@@ -50,7 +50,7 @@ echo
 echo '### Install asdf ###'
 ASDF_DIR=~/.asdf
 git clone https://github.com/asdf-vm/asdf.git $ASDF_DIR
-SET_ASDF="source $ASDF_DIR/asdf.sh && source $ASDF_DIR/asdf.sh"
+SET_ASDF="source $ASDF_DIR/asdf.sh && source $ASDF_DIR/completions/asdf.bash"
 echo $SET_ASDF >> $BASHRC
 echo           >> $BASHRC
 eval $SET_ASDF
