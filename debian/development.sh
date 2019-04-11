@@ -20,7 +20,7 @@ echo >> $BASHRC
 
 
 echo '### Install essential packages ###'
-sudo apt install -y ssh git tree direnv bash-completion
+sudo apt install -y ssh git tree direnv bash-completion dnsutils
 echo 'source /etc/bash_completion.d/git-prompt' >> $BASHRC
 echo                                            >> $BASHRC
 echo
