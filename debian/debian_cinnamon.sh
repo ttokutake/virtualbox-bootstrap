@@ -52,5 +52,20 @@ echo 'vm.max_map_count = 262144' >> /etc/sysctl.conf
 sysctl -p
 echo
 
+echo '### Install chrony'
+apt install chrony
+echo '' >> /etc/chrony/chrony.conf
+echo 'server ntp.nict.jp iburst' >> /etc/chrony/chrony.conf
+echo 'server ntp1.jst.mfeed.ad.jp iburst' >> /etc/chrony/chrony.conf
+echo 'server ntp2.jst.mfeed.ad.jp iburst' >> /etc/chrony/chrony.conf
+echo 'server ntp3.jst.mfeed.ad.jp iburst' >> /etc/chrony/chrony.conf
+echo '' >> /etc/chrony/chrony.conf
+echo 'allow 192.168.11.0/24' >> /etc/chrony/chrony.conf
+echo '' >> /etc/chrony/chrony.conf
+echo 'leapsecmode slew' >> /etc/chrony/chrony.conf
+echo 'maxslewrate 1000' >> /etc/chrony/chrony.conf
+echo 'smoothtime 400 0.001 leaponly' >> /etc/chrony/chrony.conf
+systemctl restart chrony
+systemctl enable chrony
 
 echo 'Please reboot Debian.'
