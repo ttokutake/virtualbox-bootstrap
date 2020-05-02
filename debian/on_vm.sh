@@ -19,16 +19,6 @@ apt install -y build-essential module-assistant
 m-a prepare
 echo
 
-echo '### Add Static Network ###'
-echo '####################################################################'
-echo '# NOTICE: Assume that VM has "Host-Only Ethernet Adapter" as below #'
-echo '#   Address: 192.168.56.1                                          #'
-echo '#   Netmask: 255.255.255.0                                         #'
-echo '####################################################################'
-nmcli c add type ethernet ifname enp0s3 con-name enp0s3 ipv4.method auto connection.autoconnect yes
-nmcli c add type ethernet ifname enp0s8 con-name enp0s8 ipv4.method manual ipv4.addresses 192.168.56.101/24 connection.autoconnect yes
-echo
-
 input=''
 while [ "$input" != 'ok' ]; do
   echo -n "Please input \"ok\" after inserting VBox Guest Additions' disc: "
