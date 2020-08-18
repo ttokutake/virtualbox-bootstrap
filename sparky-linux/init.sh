@@ -28,10 +28,6 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 sh ./installer.sh ~/.cache/dein
 rm installer.sh
 
-# direnv
-brew install direnv
-echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
-
 # asdf
 brew install asdf
 echo '. $(brew --prefix asdf)/asdf.sh' >> ~/.profile
@@ -51,6 +47,6 @@ sudo ./aws/install
 rm -rf awscliv2.zip ./aws
 
 # Remove unused packages
-sudo apt purge qcalculator xfburn hexchat persepolis pidgin thunderbird qbittorrent libreoffice libreoffice-core libreoffice-common qpdfview skanlite cheese qmmp sparky-tube vlc vokoscreen
+sudo apt purge qcalculator xfburn hexchat persepolis pidgin thunderbird qbittorrent libreoffice libreoffice-core libreoffice-common qpdfview skanlite cheese qmmp sparky-tube vlc
 sudo apt autoremove
 sudo apt autoclean
