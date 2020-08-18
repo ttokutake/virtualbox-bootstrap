@@ -15,12 +15,11 @@ LANG=C xdg-user-dirs-gtk-update
 # Linuxbrew
 sudo apt-get install build-essential curl file git
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >> ~/.bash_profile
-echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ~/.bashrc
-# $LD_LIBRARY_PATH の設定の参考
-# https://qiita.com/thermes/items/926b478ff6e3758ecfea
+echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ~/.profile
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+brew install gcc
+'export LDFLAGS="-L/home/linuxbrew/.linuxbrew/opt/isl@0.18/lib"' >> ~/.profile
+'export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/isl@0.18/include"' >> ~/.profile
 
 # Vim
 brew install vim
