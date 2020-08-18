@@ -34,8 +34,8 @@ echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 
 # asdf
 brew install asdf
-echo '. $(brew --prefix asdf)/asdf.sh' >> ~/.bash_profile
-echo '. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash' >> ~/.bash_profile
+echo '. $(brew --prefix asdf)/asdf.sh' >> ~/.profile
+echo '. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash' >> ~/.profile
 
 # Docker
 curl -fsSL https://get.docker.com -o get-docker.sh
