@@ -47,6 +47,6 @@ sudo ./aws/install
 rm -rf awscliv2.zip ./aws
 
 # Remove unused packages
-sudo apt purge qcalculator xfburn hexchat persepolis pidgin thunderbird qbittorrent libreoffice libreoffice-core libreoffice-common qpdfview skanlite cheese qmmp sparky-tube vlc
+sudo apt purge qcalculator xfburn hexchat persepolis pidgin thunderbird qbittorrent libreoffice libreoffice-core libreoffice-common qpdfview skanlite cheese qmmp sparky-tube vlc vokoscreen-ng
 sudo apt autoremove
 sudo apt autoclean
