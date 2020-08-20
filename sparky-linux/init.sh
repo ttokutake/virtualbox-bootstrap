@@ -36,6 +36,10 @@ echo '. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash' >> ~/.profile
 # Docker
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
+# SparkyLinux based on Debian bullseyeでは上記スクリプトは使えないので https://docs.docker.com/engine/install/debian/ でインストールする。
+# add-apt-repositoryはエラーが発生するので以下のファイルを手動で追加する。
+# > $ cat /etc/apt/sources.list.d/docker-ce.list 
+# > deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 sudo usermod -aG docker ${USER}
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
