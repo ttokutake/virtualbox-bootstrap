@@ -1,6 +1,7 @@
-sudo apt install -y vim git bash-completion curl
+sudo apt install -y vim git bash-completion curl keychain
 
 # dein.vim
+sudo apt install -y vim git bash-completion curl keychain
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
 rm ./installer.sh
