@@ -1,10 +1,7 @@
 sudo apt install -y vim git bash-completion curl keychain
 
-# dein.vim
-sudo apt install -y vim git bash-completion curl keychain
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.cache/dein
-rm ./installer.sh
+# vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
