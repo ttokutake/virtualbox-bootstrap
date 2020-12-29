@@ -21,8 +21,12 @@ brew install keychain
 echo '/home/linuxbrew/.linuxbrew/bin/keychain --nogui $HOME/.ssh/id_rsa' >> /home/ttokutake/.profile
 echo 'source $HOME/.keychain/$HOSTNAME-sh' >> /home/ttokutake/.profile
 
-# bash-completion
+# Various packages
 brew install git # To enable completion
+brew install tree
+brew install peco
+
+# bash-completion
 brew install bash-completion
 echo '[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"' >> /home/ttokutake/.profile
 [[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
