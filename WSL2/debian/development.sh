@@ -22,7 +22,10 @@ echo '/home/linuxbrew/.linuxbrew/bin/keychain --nogui $HOME/.ssh/id_rsa' >> /hom
 echo 'source $HOME/.keychain/$HOSTNAME-sh' >> /home/ttokutake/.profile
 
 # bash-completion
-# TBD
+brew install git # To enable completion
+brew install bash-completion
+echo '[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"' >> /home/ttokutake/.profile
+[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
 
 # asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
